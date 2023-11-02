@@ -1,0 +1,21 @@
+.card-two {
+  position: relative;
+  top: 18.3vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #000;
+  width: 89.9vw;
+  height: 37.9vh;
+  margin-left: 4.2vw;
+}
+
+.card-two p {
+  color: #FFF;
+}
+
+.division {
+  color: #FFF;
+  height: .25rem;
+}

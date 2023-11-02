@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'copaNinjaMtbNew'`, () => {
+  it(`should have as title 'copaNinjaMtb'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('copaNinjaMtbNew');
+    expect(app.title).toEqual('copaNinjaMtb');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('copaNinjaMtbNew app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('copaNinjaMtb app is running!');
   });
 });

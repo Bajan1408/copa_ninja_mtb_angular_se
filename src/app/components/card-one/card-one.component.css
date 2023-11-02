@@ -1,0 +1,16 @@
+.card-one {
+  position: relative;
+  top: 18.3vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #000;
+  width: 89.9vw;
+  height: 64.5vh;
+  margin-left: 4.2vw;
+}
+
+.card-one p {
+  color: #FFF;
+}

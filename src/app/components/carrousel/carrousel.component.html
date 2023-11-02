@@ -1,0 +1,9 @@
+
+<div class="main">
+  <h1>GALERIA</h1>
+  <div id="slider">
+    <img *ngFor="let currentImage of images" src= "{{ currentImage.src }}" [ngClass]="currentImage.selected">
+  </div>
+</div>
+
+
