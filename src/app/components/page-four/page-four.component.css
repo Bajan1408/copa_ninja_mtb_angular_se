@@ -1,5 +1,6 @@
 .backgnd-page-four {
   display: flex;
+  flex-direction: column;
   justify-content: center;
 
   background-color: black;
@@ -22,6 +23,8 @@
   align-items: center;
 
   height: 40%;
+  margin-top: -12rem;
+
 }
 
 .text01 {
@@ -30,7 +33,7 @@
   height: 8vh;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
-  margin-top: 6rem;
+  margin-top: 0;
 }
 
 .saiba-mais {
@@ -50,4 +53,15 @@
   display: flex;
   justify-content: center;
   text-decoration: none;
+}
+
+.text_left {
+  color: #fff;
+  width: 29rem;
+  margin-left: 3.5rem;
+}
+
+.img_card_left {
+  width: 25.375rem;
+  height: 17.375rem;
 }

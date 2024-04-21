@@ -4,7 +4,9 @@
   top: 19vh;
   width: 89.9vw;
   max-height: 97vh;
-  margin-left: 4.2vw;
+  
+  /* margin-left: 4.2vw; */
+  left: 2.67rem;
 }
 
 .frame-central {

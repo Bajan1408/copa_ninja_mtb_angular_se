@@ -6,7 +6,8 @@ main {
   align-items: center;
 
   width: 89.9vw;
-  margin-left: 4.2vw;
+  /* margin-left: 4.2vw; */
+  left: 2.67rem;
   padding: 35px 0 35px 0;
   background-color: #b33620;
 }
