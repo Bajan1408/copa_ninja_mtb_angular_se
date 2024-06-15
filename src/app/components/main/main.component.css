@@ -1,12 +1,13 @@
-
 .div-main-container img {
   position: relative;
   top: 19vh;
-  width: 89.9vw;
+  width: 100vw;
   max-height: 97vh;
-  
-  /* margin-left: 4.2vw; */
-  left: 2.67rem;
+}
+
+.main-img {
+  width: 100vw;
+  align-self: center;
 }
 
 .frame-central {
@@ -17,8 +18,8 @@
   position: absolute;
   width: 70%;
   height: 30vh;
-  top: 356px;
-  left: 136px;
+  top: 22.25rem;
+  left: 11.5rem;
   background-image: linear-gradient(to right, #FF5B3F7D, #FF5B3F7D 49%);
   border-radius: 10px;
 }
@@ -37,3 +38,5 @@
   font-style: italic;
   color: #FFF;
 }
+
+

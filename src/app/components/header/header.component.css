@@ -1,8 +1,9 @@
 
 header {
+ width: 100vw;
  position: fixed;
  z-index: 1;
- left: 2.67rem;
+ /* left: 2.67rem; */
 }
 
 .header-menu {
@@ -10,9 +11,9 @@ header {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  width: 90vw;
+  width: 100vw;
   height: 19vh;
-  margin: auto;
+  /* margin: auto; */
   background-color: #883A2D;
   border-top: 0.28rem #FFF solid;
 }
@@ -60,6 +61,6 @@ header {
 
 .division {
   background-color: #FFF;
-  width: 90vw;
+  width: 100vw;
   height: .15rem;
 }

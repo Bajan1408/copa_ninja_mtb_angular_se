@@ -9,3 +9,9 @@
   color: #FFF;
   height: .25rem;
 }
+
+@media (max-width: 500px) {
+  body {
+    width: 100%;
+  }
+}

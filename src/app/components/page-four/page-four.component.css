@@ -4,15 +4,15 @@
   justify-content: center;
 
   background-color: black;
-  width: 90vw;
+  width: 89.9vw;
   height: 110vh;
 
   position: relative;
-  top: 10.8vh;
+  top: 5.5rem;
 
 
-  margin-left: 2.67rem;
-  margin-bottom: 7vh;
+  left: 2.67rem;
+  margin-bottom: 7rem;
 
   z-index: 0;
 }
@@ -22,9 +22,7 @@
   flex-direction: column;
   align-items: center;
 
-  height: 40%;
-  margin-top: -12rem;
-
+  height: 37%;
 }
 
 .text01 {
@@ -33,13 +31,13 @@
   height: 8vh;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
-  margin-top: 0;
+  margin-top: 4rem;
 }
 
 .saiba-mais {
   width: 19rem;
   height: 3rem;
-  margin-top: 4rem;
+  margin-top: 2rem;
   background-color: #FF5B3F;
   border-radius: 3rem;
 }
@@ -55,13 +53,57 @@
   text-decoration: none;
 }
 
+.card_left {
+  width: 31rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 3rem;
+  gap: 2rem;
+
+  border: 2px solid red;
+}
+
 .text_left {
   color: #fff;
-  width: 29rem;
-  margin-left: 3.5rem;
+  /* width: 34rem; */
 }
 
 .img_card_left {
-  width: 25.375rem;
-  height: 17.375rem;
+  width: 23.375rem;
+  height: 16.375rem;
+  border-radius: .625rem;
 }
+
+.card_right {
+  display: flex;
+  flex-direction: column;
+  
+  margin-left: 34rem;
+  margin-top: -12rem;
+  gap: 2rem;
+}
+
+.text_right {
+  color: #fff;
+  width: 34rem;
+}
+
+.img_card_right {
+  width: 23.375rem;
+  height: 16.375rem;
+  border-radius: .625rem;
+}
+
+.logo-whats {
+  display: flex;
+  align-items: end;
+}
+
+.whats-logo {
+  width: 3.5rem;
+  height: 3.5rem;
+
+}
+
