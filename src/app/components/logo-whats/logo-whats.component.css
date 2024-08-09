@@ -1,0 +1,12 @@
+.logo-whats {
+    display: flex;
+    flex-direction: row-reverse;
+    position: relative;
+  }
+  
+.whats-logo {
+    width: 3.5rem;
+    height: 3.5rem;
+    margin: 0 2rem 2rem 0;
+  
+  }

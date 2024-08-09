@@ -10,6 +10,8 @@ import { PhotosComponent } from './components/photos/photos.component';
 import { CardTwoComponent } from './components/card-two/card-two.component';
 import { CarrouselComponent } from './components/carrousel/carrousel.component';
 import { PageFourComponent } from './components/page-four/page-four.component';
+import { LogoWhatsComponent } from './components/logo-whats/logo-whats.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { PageFourComponent } from './components/page-four/page-four.component';
     PhotosComponent,
     CardTwoComponent,
     CarrouselComponent,
-    PageFourComponent
+    PageFourComponent,
+    LogoWhatsComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

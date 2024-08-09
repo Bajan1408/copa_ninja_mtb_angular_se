@@ -1,15 +1,59 @@
-.card-one {
+.container {
   position: relative;
-  top: 18.3vh;
+  top: 23.3vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: var(--background-width-1025px);
+  height: 64.5vh;
+}
+
+.card-one {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   background-color: #000;
-  width: 100vw;
-  height: 64.5vh;
+  width: 100%;
+  height: 100%;
+  gap: 4rem;
 }
 
 .card-one p {
   color: #FFF;
+}
+
+.social-media-headline {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 50%;
+}
+
+.social-media-headline h2 {
+  color: #ff5b3f;
+}
+
+.icons {
+  margin-top: 2rem;
+  font-size: 3rem;
+  width: 17rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.icons a { 
+  color: #948f8f;
+}
+
+@media (min-width: 1025px) {
+   .container {
+     background-image: linear-gradient(to bottom, var(--secondary-background-grad), var(--primary-background-grad));
+     top: 0;
+   }
+   .card-one {
+      width: var(--secondary-background-width-1025px);
+      height: 100%;
+   }
 }
