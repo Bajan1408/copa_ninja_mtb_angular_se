@@ -150,11 +150,10 @@ export class CarrouselComponent implements OnInit {
     if(this.carousel && this.carousel.nativeElement) {
       
       if(offset == -100) {
-        offset = 100;
+        offset = 0;
       }
       this.carousel.nativeElement.style.transform = `translateX(${offset}%)`;
-      this.carousel.nativeElement.style.width = `124rem`;
-      this.carousel.nativeElement.style.border = `5px solid yellow`;
+      //this.carousel.nativeElement.style.width = `124rem`;
       console.log("I am carousel.nativeElement.style.width " + this.carousel.nativeElement.style.width);
     }
     
