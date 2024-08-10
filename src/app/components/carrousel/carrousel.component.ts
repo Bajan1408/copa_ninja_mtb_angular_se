@@ -125,7 +125,7 @@ export interface Image {
 })
 
 export class CarrouselComponent implements OnInit {
-  time: number = 4000;
+  time: number = 2000;
   currentImgIndex: number = 0;
   images: Image[] = [
     { src: "assets/img/1a_etapa2023.jpg", selected: true, center: true },
