@@ -218,7 +218,7 @@
 
 .carousel-image {
   flex: 0 0 33.33%;
-  opacity: 0.5;
+  /* opacity: 0.5; */
   transition: transform 0.5s ease-in-out, opacity 0.1s ease-in-out;
 }
 
@@ -234,15 +234,15 @@
 } */
 
 .carousel-image.selected img {
-  transform: scaleX(2);
-  transform: scaleY(2);
+  /* transform: scaleX(1.5);
+  transform: scaleY(1.5); */
   opacity: 1;
 }
 
 .carousel-image.center img {
   position: absolute;
   margin: auto;
-  opacity: 1;
+  opacity: 0.5;
 }
 
 .arrow {

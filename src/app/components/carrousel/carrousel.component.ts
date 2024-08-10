@@ -123,10 +123,21 @@ export interface Image {
   templateUrl: './carrousel.component.html',
   styleUrls: ['./carrousel.component.css']
 })
+
 export class CarrouselComponent implements OnInit {
   time: number = 4000;
   currentImgIndex: number = 0;
   images: Image[] = [
+    { src: "assets/img/1a_etapa2023.jpg", selected: true, center: true },
+    { src: "assets/img/foto_atleta.jpg", selected: false, center: false },
+    { src: "assets/img/2a_etapa2023.jpg", selected: false, center: false },
+    { src: "assets/img/4a_etapa2023.jpg", selected: false, center: false },
+    { src: "assets/img/foto_atleta.jpg", selected: false, center: false },
+    { src: "assets/img/1a_etapa2023.jpg", selected: true, center: true },
+    { src: "assets/img/foto_atleta.jpg", selected: false, center: false },
+    { src: "assets/img/2a_etapa2023.jpg", selected: false, center: false },
+    { src: "assets/img/4a_etapa2023.jpg", selected: false, center: false },
+    { src: "assets/img/foto_atleta.jpg", selected: false, center: false },
     { src: "assets/img/1a_etapa2023.jpg", selected: true, center: true },
     { src: "assets/img/foto_atleta.jpg", selected: false, center: false },
     { src: "assets/img/2a_etapa2023.jpg", selected: false, center: false },
@@ -146,11 +157,12 @@ export class CarrouselComponent implements OnInit {
     this.images.forEach((image, index) => {
       image.selected = index === this.currentImgIndex;
     });
+
     let offset = -100 / 3 * this.currentImgIndex;
     if(this.carousel && this.carousel.nativeElement) {
       
       if(offset == -100) {
-        offset = 0;
+        offset = 33;
       }
       this.carousel.nativeElement.style.transform = `translateX(${offset}%)`;
       //this.carousel.nativeElement.style.width = `124rem`;
