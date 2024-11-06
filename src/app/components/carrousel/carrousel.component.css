@@ -224,6 +224,8 @@
 
 .carousel-image img {
   width: 90%;
+  min-height: 13rem;
+  border-radius: .2rem;
   display: block;
   margin: 0 auto;
 }
@@ -278,5 +280,9 @@
     top: 0.1vh;
     height: 93vh;
     margin-bottom: 0.1rem;
+  }
+
+  .carousel-image img {
+    min-height: 15rem;
   }
 }
