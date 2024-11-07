@@ -65,10 +65,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "copaNinjaMtbNew:build:production"
+              "buildTarget": "copaNinjaMtbNew:build:production"
             },
             "development": {
-              "browserTarget": "copaNinjaMtbNew:build:development"
+              "buildTarget": "copaNinjaMtbNew:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -76,7 +76,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "copaNinjaMtbNew:build"
+            "buildTarget": "copaNinjaMtbNew:build"
           }
         },
         "test": {
