@@ -1,11 +1,12 @@
 .card-two {
+  background-color: #000;
   position: relative;
-  top: 18.3vh;
+  top: 17.5vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #000;
+  
   width: 100vw;
   height: 37.9vh;
 }
@@ -14,16 +15,11 @@
   color: #FFF;
 }
 
-.division {
-  color: #FFF;
-  height: .25rem;
-}
-
 @media (min-width: 1025px)  {
    .container {
       background-image: linear-gradient(to top, var(--primary-background-grad), var(--secondary-background-grad));
       width: var(--background-width-1025px);
-      height: 45.9vh;
+      height: 46.2vh;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -31,7 +27,7 @@
 
    .card-two {
       width: var(--secondary-background-width-1025px);
-      height: 45.9vh;
-      top: .5vh;
+      position: static;
+      height: 46.2vh;
    }
 }

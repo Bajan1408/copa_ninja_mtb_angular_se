@@ -47,6 +47,55 @@
   color: #948f8f;
 }
 
+@media (max-width: 768px) {
+    .container {
+        top: 17.1vh;
+
+        aspect-ratio: 10 / 4;
+    }
+
+    .card-one {
+        top: -10.3vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #000;
+        width: 100%;
+        /* white-space: nowrap; */
+        margin-left: 4vw;
+        gap: 3rem;
+
+        aspect-ratio: 10 / 2;
+      }
+
+      .paragraph {
+        width: 80%;
+        padding: .5rem;
+      }
+
+      .social-media-headline {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        white-space: nowrap;
+        gap: .5rem;
+        width: 65%;
+
+      }
+
+      .icons {
+        width: clamp(17rem, 25vw, 33rem);
+        justify-content: space-around;
+
+      }
+
+      .icons .bi {
+        font-size: 2.5rem;
+      }
+}
+
 @media (min-width: 1025px) {
    .container {
      background-image: linear-gradient(to bottom, var(--secondary-background-grad), var(--primary-background-grad));

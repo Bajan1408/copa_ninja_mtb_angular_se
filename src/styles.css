@@ -4,7 +4,8 @@
 
 :root {
   --primary-menu-color: #c54f0b;
-  --secondary-color: #c54f0b;
+  --primary-color: #c54f0b;
+  --secondary-color: #dd6824;
 
   --primary-background-grad:  #f7c079;
   --secondary-background-grad: #f8e4c9;
@@ -20,6 +21,7 @@
 }
 
 body {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -30,6 +32,12 @@ body {
 .division {
   color: #FFF;
   height: .25rem;
+}
+
+@media (max-width: 768px) {
+    html, body {
+        overflow-x: hidden;
+    }
 }
 
 

@@ -10,6 +10,8 @@ export class CardOneComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    
   }
+
 
 }
