@@ -16,7 +16,7 @@ header {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  height: 19vh;
+  height: 9.12rem;
   background-color: var(--primary-menu-color);
 }
 
@@ -85,10 +85,15 @@ header {
     height: min(98vh, 550px);
     background-color: var(--primary-menu-color);
     position: absolute;
-    right: -17.5rem;
+    right: -18.5rem;
     top: 0;
     z-index: 1;
     border-radius: 2rem 0 0 2rem;
+    transition: all .5s;
+}
+
+.header-menu-mobile.open {
+    right: 0;
     transition: all .5s;
 }
 
@@ -99,12 +104,11 @@ header {
 
 @media (max-width: 768px) {
     header {
-        min-width: 100%;
-        margin-left: 2vw;
+        min-width: 100vw;
     }
 
     .header-menu{
-        height: 12vh;
+        height: 5.12rem;
     }
 
     .menu-li {
@@ -150,8 +154,7 @@ header {
     }
 
 
-
-    /* fim do meno mobile */
+    /* fim do menu mobile */
 
     #menu_bar {
         display: inline;
@@ -174,23 +177,25 @@ header {
         left: 1rem;
       }
 
-      .frame-central_header {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        position: absolute;
-        width: 50%;
-        height: 8vh;
-        top: 1rem;
-        left: 26%;
-        background-image: linear-gradient(to right, #FF5B3F7D, #FF5B3F7D 49%);
-        border-radius: 10px;
-      }
+    .frame-central_header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      /* width: 55%; */
+      width: clamp(10.625rem, 55%, 23.75rem);
+      /* height: 12vh; */
+      height: clamp(3rem, 80%, 5rem);
+      top: .5rem;
+      left: 26%;
+      background-image: linear-gradient(to right, #FF5B3F7D, #FF5B3F7D 49%);
+      border-radius: 10px;
+    }
       
       .slogan1_header {
         /* font-size: 1rem; */
-        font-size: clamp(.5rem, 2.5vh, 3rem);
+        font-size: clamp(.5rem, 5vw, 5rem);
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         font-weight: 700;
         color: #FFF;
@@ -199,7 +204,7 @@ header {
       .slogan2_header {
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         /* font-size: .75rem; */
-        font-size: clamp(.25rem, 1.5vh, 2rem);
+        font-size: clamp(.5rem, 2vw, 1.5rem);
         font-weight: 500;
         font-style: italic;
         color: #FFF;

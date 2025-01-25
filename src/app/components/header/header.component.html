@@ -1,10 +1,10 @@
-<header (click)="hideMobileMenu()">
+<header>
   <div class="header-menu">
       <div class="logo">
           <img src="assets/img/logo.svg" alt="logo copa ninja mtb">
       </div>
       <aside id="menu" class="menu">
-          <img id="menu_bar" #menu_bar src="../../../assets/img/menu_bar_white.svg" (click)="showMobileMenu()" alt="menu_bar">
+          <img id="menu_bar" class="menu_bar" #menu_bar src="../../../assets/img/menu_bar_white.svg" (click)="openMenu()" alt="menu_bar">
           <ul class="menu-li">
               <li class="item-li-menu"><a href="#">HOME</a></li>
               <li class="item-li-menu"><a href="#">RANKING</a></li>
@@ -20,15 +20,15 @@
       </div>
   </div>
   
-  <div class="division"></div>
+  <!-- <div class="division"></div> -->
 
 
-  <div class="header-menu-mobile" #header_menu_mobile>
+  <div class="header-menu-mobile" [class.appear]="menuService.menuOpen$ | async" (click)='onMenuClick($event)' #header_menu_mobile>
     <!-- <div class="logo">
         <img src="assets/img/logo.svg" alt="logo copa ninja mtb">
     </div> -->
     <aside id="menu-mobile" class="menu">
-        <img id="menu-bar-inside" #menu_bar src="../../../assets/img/menu_bar_close_white.svg" alt="menu_mobile">
+        <img id="menu-bar-inside" (click)="menuService.closeMenu()" #menu_bar src="../../../assets/img/menu_bar_close_white.svg" alt="menu_mobile">
         <ul class="menu-li-mobile">
             <li class="item-li-menu-mobile"><a href="#">HOME</a></li>
             <li class="item-li-menu-mobile"><a href="#">RANKING</a></li>

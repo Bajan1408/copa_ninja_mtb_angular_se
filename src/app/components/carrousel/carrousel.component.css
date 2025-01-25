@@ -6,12 +6,11 @@
   align-items: center;
   overflow: hidden;
 
-  position: relative;
-  top: 17.8vh;
+  /* position: relative;
+  top: 17.8vh; */
 
   width: 100vw;
   height: 89vh;
-  margin-bottom: 1rem;
 }
 
 .main h1 {
