@@ -1,5 +1,4 @@
 .backgnd-page-four {
-  align-self: center;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -7,11 +6,6 @@
   background-color: black;
   width: 100vw;
   height: 130vh;
-
-  /* position: relative;
-  top: 4.4rem; */
-
-  /* margin-bottom: 4.5rem; */
 }
 
 .header {
@@ -117,22 +111,72 @@
 }
 
 @media (max-width: 768px) {
+  .backgnd-page-four {
+    height: 280vw;
+    min-height: 67rem;
+    /* height: clamp(67rem 140vh 82.5rem); */
+    max-height: 70rem;
+  }  
+
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 80%;
+    height: 20%;
+
+    margin-bottom: 1rem;
+  }
+
+  .saiba-mais {
+    width: 15rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1.5rem;
+    background-color: #FF5B3F;
+    border-radius: 1.5rem;
+  }
+
+  .text01 {
+    margin-top: 0;
+  }
+
+  .text_cards {
+    width: 20rem;
+  }
+
   .card_left {
-    width: 21rem;
+    position: static;
+    width: 23rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 2rem;
-  
-    border: 2px solid red;
   }
 
   .card_right {
-    display: flex;
-    flex-direction: column;
-    
+    position: static;
+    width: 23rem;
+    align-items: center;
     gap: 2rem;
+  }
+
+  .img_cards {
+    width: 20.3rem;
+    height: 14.1rem;
+    border-radius: .625rem;
+  }
+  
+
+  .cards {
+    position: static;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
   }
 
   .img_card_left {
@@ -145,6 +189,10 @@
     width: 18.375rem;
     height: 13.375rem;
     border-radius: .625rem;
+  }
+
+  .card-leia-mais {
+    text-align: center;
   }
 }
 
