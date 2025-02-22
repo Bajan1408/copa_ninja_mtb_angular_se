@@ -1,63 +1,6 @@
 <div class="container">
   <div class="main">
-    <h1>Relaxe enquanto curte algumas fotos da nossa galeria!!</h1>
-    <!-- <div id="slider">
-      <img *ngFor="let currentImage of images" src= "{{ currentImage.src }}" [ngClass]="currentImage.selected">
-    </div> -->
-  
-    <!-- <div class="carousel-container">
-      <div class="arrow left" (click)="previousImage()">&#10094;</div>
-      <div class="carousel">
-        <div *ngFor="let image of visibleImages" class="carousel-image" [ngClass]="{'selected': image.selected}">
-          <img [src]="image.src">
-        </div>
-      </div>
-      <div class="arrow right" (click)="nextImage()">&#10095;</div>
-    </div> -->
-  
-    <!-- <div class="carousel-container">
-      <div class="arrow left" (click)="previousImage()">&#10094;</div>
-      <div class="carousel">
-        <div *ngFor="let image of images; let i = index" 
-             class="carousel-image" 
-             [ngClass]="{
-               'selected': i === currentImgIndex, 
-               'prev': i === (currentImgIndex - 1 + images.length) % images.length, 
-               'next': i === (currentImgIndex + 1) % images.length
-             }">
-          <img [src]="image.src">
-        </div>
-      </div>
-      <div class="arrow right" (click)="nextImage()">&#10095;</div>
-    </div> -->
-  
-    <!-- <div class="carousel-container">
-      <div class="arrow left" (click)="previousImage()">&#10094;</div>
-      <div class="carousel">
-        <div *ngFor="let image of images; let i = index" 
-             class="carousel-image" 
-             [ngClass]="{
-               'selected': i === currentImgIndex, 
-               'prev': i === (currentImgIndex - 1 + images.length) % images.length, 
-               'next': i === (currentImgIndex + 1) % images.length
-             }">
-          <img [src]="image.src">
-        </div>
-      </div>
-      <div class="arrow right" (click)="nextImage()">&#10095;</div>
-    </div> -->
-  
-    <!-- <div class="carousel-container">
-      <div class="arrow left" (click)="previousImage()">&#10094;</div>
-      <div class="carousel">
-        <div *ngFor="let image of images" class="carousel-image">
-          <img [src]="image.src" [class.selected]="image.selected">
-        </div>
-      </div>
-      <div class="arrow right" (click)="nextImage()">&#10095;</div>
-    </div> -->
-  
-  
+    <h1>Relaxe enquanto curte algumas fotos da nossa galeria!!</h1>  
     <div class="carousel-container">
       <div class="arrow left" (click)="previousImage()">&#10094;</div>
       <div class="carousel" #carousel>

@@ -137,6 +137,7 @@
         padding-left: 2rem;
         width: 14rem;
         height: 9rem;
+        gap: 0.2rem;
 
     }
 
@@ -144,7 +145,7 @@
         color: #f6f8fa;
         width: 10rem;
         letter-spacing: .15rem;
-        font-size: 1.2rem;
+        font-size: 1.5rem;
 
     }
 
@@ -158,7 +159,7 @@
 
     .footer-col_mobile li {
         list-style: none;
-        font-size: .85rem;
+        font-size: 1rem;
     }
     
     .footer-col_mobile li a {

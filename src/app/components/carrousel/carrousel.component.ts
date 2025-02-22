@@ -1,5 +1,6 @@
-/*
+
  import { Component, OnInit } from '@angular/core';
+ import { NgFor, NgClass } from '@angular/common';
 
  export interface Image {
    src: string;
@@ -9,8 +10,12 @@
  @Component({
    selector: 'app-carrousel',
    templateUrl: './carrousel.component.html',
-   styleUrls: ['./carrousel.component.css']
+   styleUrls: ['./carrousel.component.css'],
+   standalone: true,
+   imports: [NgFor, NgClass]
  })
+
+ 
  export class CarrouselComponent implements OnInit {
    time: number = 4000;
    currentImgIndex: number = 0;
@@ -39,6 +44,7 @@
      this.currentImgIndex = (this.currentImgIndex + 1) % this.images.length;
      this.updateVisibleImages();
    }
+   
    previousImage(): void {
      this.currentImgIndex = (this.currentImgIndex - 1 + this.images.length) % this.images.length;
      this.updateVisibleImages();
@@ -51,10 +57,13 @@
    }
  }
 
-*/
 
+
+
+/*
 
 import { Component, ViewChild, ElementRef, OnInit, asNativeElements } from '@angular/core';
+import { NgFor, NgClass } from '@angular/common';
 
 export interface Image {
   src: string;
@@ -63,9 +72,11 @@ export interface Image {
 }
 
 @Component({
-  selector: 'app-carrousel',
-  templateUrl: './carrousel.component.html',
-  styleUrls: ['./carrousel.component.css']
+    selector: 'app-carrousel',
+    templateUrl: './carrousel.component.html',
+    styleUrls: ['./carrousel.component.css'],
+    standalone: true,
+    imports: [NgFor, NgClass]
 })
 
 export class CarrouselComponent implements OnInit {
@@ -105,9 +116,9 @@ export class CarrouselComponent implements OnInit {
     let offset = -100 / 3 * this.currentImgIndex;
     if(this.carousel && this.carousel.nativeElement) {
       
-      if(offset == -100) {
-        offset = 0;
-      }
+    //   if(offset == -100) {
+    //     offset = 0;
+    //   }
       this.carousel.nativeElement.style.transform = `translateX(${offset}%)`;
       //this.carousel.nativeElement.style.width = `124rem`;
       console.log("I am carousel.nativeElement.style.width " + this.carousel.nativeElement.style.width);
@@ -131,3 +142,5 @@ export class CarrouselComponent implements OnInit {
     }, this.time);
   }
 }
+
+*/
