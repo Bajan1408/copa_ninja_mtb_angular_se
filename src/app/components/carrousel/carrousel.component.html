@@ -1,9 +1,9 @@
 <div class="container">
   <div class="main" #main>
     <h1>Relaxe enquanto curte algumas fotos da nossa galeria!!</h1>  
-    <div class="carousel-container">
+    <div class="carousel-container" (mouseenter)="stopAutoPlay()" (mouseleave)="initAutoPlay()">
       <div class="arrow left" (click)="previousImage()">&#10094;</div>
-      <div class="carousel" #carousel (transitionend)="onSlideTransitionEnd()" (mouseenter)="stopAutoPlay()">
+      <div class="carousel" #carousel (transitionend)="onSlideTransitionEnd()">
         <div *ngFor="let image of clonedSlides; let i = index" class="carousel-image" ngClass="image">
           <div class="div_img">
              <img [src]="image.src"

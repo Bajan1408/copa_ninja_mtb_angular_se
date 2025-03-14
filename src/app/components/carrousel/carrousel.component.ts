@@ -27,7 +27,9 @@
 
  
  export class CarrouselComponent implements OnInit {
-   slideAuto!: ReturnType<typeof setInterval>;
+   slideAuto!: ReturnType<typeof setInterval> | undefined;
+   slideNextAndPrevious!: ReturnType<typeof setTimeout>;
+   slideResize!: ReturnType<typeof setTimeout>;
    clonedSlides: Image[] = [];
 
    @ViewChild('carousel') carousel!: ElementRef<HTMLElement>;
@@ -41,7 +43,7 @@
       slideWidth: 0,
       autoPlay: true,
       isCloned: false,
-      timeInterval: 4000
+      timeInterval: 2000
    };
 
    images: Image[] = [
@@ -76,8 +78,8 @@
 
    @HostListener('window: resize', ['$event'])
    onResize(event: Event): void {
-       clearTimeout(this.slideAuto);
-       this.slideAuto = setTimeout(() => {
+       clearTimeout(this.slideResize);
+       this.slideResize = setTimeout(() => {
            this.setVisibleSlide(this.state.currentSlideIndex, true);
        }, 2000);
    }
@@ -142,7 +144,7 @@
       if(this.state.currentSlideIndex >= this.clonedSlides.length - 2) {
           this.state.currentSlideIndex = 2;
           this.setVisibleSlide(this.state.currentSlideIndex, false);
-          this.slideAuto = setTimeout(() => {
+          this.slideNextAndPrevious = setTimeout(() => {
               this.nextImage();
           }, 1);
           return;
@@ -153,10 +155,10 @@
    }
    
    previousImage(): void {
-      if(this.state.currentSlideIndex <= 1) {
+      if(this.state.currentSlideIndex <= 2) {
           this.state.currentSlideIndex = this.clonedSlides.length - 2;
           this.setVisibleSlide(this.state.currentSlideIndex, false);
-          this.slideAuto = setTimeout(() => {
+          this.slideNextAndPrevious = setTimeout(() => {
             this.previousImage();
           }, 1);
           return;
@@ -167,14 +169,42 @@
    }
 
    setAutoPlay(): void {
-       if(this.state.autoPlay) {
-           this.slideAuto = setInterval(this.nextImage, this.state.timeInterval);
+    console.log('setAutoPlay chamado..');
+       if(this.slideAuto !== undefined) {
+          console.log(`interval já está rodando. Não criando um novo interval.. saindo...`);
+          return;
        }
+
+       if(this.state.autoPlay) {
+           this.slideAuto = setInterval(() => {
+               this.nextImage();
+           }, this.state.timeInterval);
+       }
+       console.log(`this.slideAuto no final da setAutoPlay ${this.slideAuto}`);
+       
    }
 
-   stopAutoPlay = (): void => {
-    //    clearInterval(this.slideAuto);
-       console.log('Evento to mouseenter');
+   initAutoPlay(): void {
+       console.log('initAutoPlay chamado..');
+       this.stopAutoPlay();
+       this.state.autoPlay = true;
+       console.log(`this.slideAuto na initAutoPlay ${this.slideAuto}`);
+       
+       console.log(`Chamando setAutoPlay...`);
+       this.setAutoPlay();
+   }
+
+   stopAutoPlay(): void {
+       console.log('Chamei o stopAutoPlay');
+       console.log(`this.slideAuto no stopAutoPlay antes do clearInterval: ${this.slideAuto}`);
+       if(this.slideAuto !== undefined) {
+          clearInterval(this.slideAuto);
+          console.log(`this.slideAuto no stopAutoPlay depois do clearInterval e antes de setar undefined na variavel: ${this.slideAuto}`);
+          this.state.autoPlay = false;
+          this.slideAuto = undefined;
+          console.log(`this.slideAuto no stopAutoPlay depois do clearInterval e depois de setar undefined na variavel: ${this.slideAuto}`);
+          console.log(`Saindo do stopAutoPlay...`);
+       }
    }
 
    initSlider(index: number, autoPlay: boolean, timeInterval: number): void {
