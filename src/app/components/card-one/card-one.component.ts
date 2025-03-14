@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
     styleUrls: ['./card-one.component.css'],
     standalone: true
 })
+
 export class CardOneComponent implements OnInit {
 
   constructor() { }

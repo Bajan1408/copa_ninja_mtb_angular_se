@@ -1,11 +1,17 @@
 <div class="container">
-  <div class="main">
+  <div class="main" #main>
     <h1>Relaxe enquanto curte algumas fotos da nossa galeria!!</h1>  
     <div class="carousel-container">
       <div class="arrow left" (click)="previousImage()">&#10094;</div>
-      <div class="carousel" #carousel>
-        <div *ngFor="let image of images" class="carousel-image" [ngClass]="{'selected': image.selected}">
-          <img [src]="image.src">
+      <div class="carousel" #carousel (transitionend)="onSlideTransitionEnd()" (mouseenter)="stopAutoPlay()">
+        <div *ngFor="let image of clonedSlides; let i = index" class="carousel-image" ngClass="image">
+          <div class="div_img">
+             <img [src]="image.src"
+             [class.cloned] = "image.cloned" 
+             (dragstart)="dragstartPreventDefault($event)"
+             #img
+             >
+          </div>
         </div>
       </div>
       <div class="arrow right" (click)="nextImage()">&#10095;</div>

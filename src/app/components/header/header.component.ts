@@ -25,12 +25,10 @@ export class HeaderComponent implements OnInit {
     }
 
     openMenu() {
-        console.log('Chamei o openMenu no header..');
         this.menuService.openMenu();
     }
 
     closeMenu() {
-        console.log('Chamei o closemenu no header..');
         this.menuService.closeMenu();
     }
 
